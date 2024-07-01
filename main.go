@@ -1,7 +1,7 @@
 package main
 
 import (
-	handlers "hng-task1/api"
+	handlers "hng-task-one/api"
 	"log"
 	"net/http"
 	"os"

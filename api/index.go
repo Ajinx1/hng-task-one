@@ -3,8 +3,8 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"hng-task1/schemas"
-	"hng-task1/services"
+	"hng-task-one/schemas"
+	"hng-task-one/services"
 	"net/http"
 )
 

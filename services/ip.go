@@ -1,7 +1,7 @@
 package services
 
 import (
-	"hng-task1/repositories"
+	"hng-task-one/repositories"
 	"net/http"
 )
 

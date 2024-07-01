@@ -1,3 +1,3 @@
-module hng-task1
+module hng-task-one
 
 go 1.19

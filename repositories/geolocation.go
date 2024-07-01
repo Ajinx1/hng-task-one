@@ -3,7 +3,7 @@ package repositories
 import (
 	"encoding/json"
 	"fmt"
-	"hng-task1/schemas"
+	"hng-task-one/schemas"
 	"net/http"
 	"os"
 )

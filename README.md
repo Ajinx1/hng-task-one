@@ -1,4 +1,4 @@
-# hng-task1
+# hng-task-one
 
 a small server to fetch location and current weather condition using an api written in golang using go's default http.
 
