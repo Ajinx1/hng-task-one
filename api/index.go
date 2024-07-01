@@ -14,7 +14,6 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 	if visitorName == "" {
 		visitorName = "Guest"
 	} else {
-		// Remove surrounding double quotes from visitorName
 		visitorName = strings.Trim(visitorName, `"`)
 	}
 
