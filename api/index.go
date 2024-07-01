@@ -6,12 +6,16 @@ import (
 	"hng-task-one/schemas"
 	"hng-task-one/services"
 	"net/http"
+	"strings"
 )
 
 func HelloHandler(w http.ResponseWriter, r *http.Request) {
 	visitorName := r.URL.Query().Get("visitor_name")
 	if visitorName == "" {
 		visitorName = "Guest"
+	} else {
+		// Remove surrounding double quotes from visitorName
+		visitorName = strings.Trim(visitorName, `"`)
 	}
 
 	var errResponse schemas.ErrorResponse
@@ -43,10 +47,12 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	greeting := fmt.Sprintf("Hello, %s!, the temperature is %.0f degrees Celsius in %s", visitorName, temperature, location)
+
 	response := schemas.HelloResponse{
 		ClientIP: clientIP,
 		Location: location,
-		Greeting: fmt.Sprintf("Hello, %s!, the temperature is %.2f degrees Celsius in %s", visitorName, temperature, location),
+		Greeting: greeting,
 	}
 
 	w.Header().Set("Content-Type", "application/json")
